@@ -1,31 +1,59 @@
 <script>
 	export let name;
+	import Router from "svelte-spa-router";
+
+	//importing the pages
+	import Home from "./pages/Home.svelte";
+	import About from "./pages/About.svelte";
+	import Contact from "./pages/Contact.svelte";
+	import Skills from "./pages/Skills.svelte";
+	import Resume from "./pages/Resume.svelte";
+	import Projects from "./pages/Projects.svelte";
+	import Blog from "./pages/Blog.svelte";
+	import Education from "./pages/Education.svelte";
+
+	//routes
+	const routes = {
+		"/": Home,
+		"/about": About,
+		"/contact": Contact,
+		"/skills": Skills,
+		"/education": Education,
+		"/resume": Resume,
+		"/projects": Projects,
+		"/blog": Blog,
+	};
 </script>
 
+<nav>
+
+	<a href="#/">Home</a>
+	<a href="#/about">About</a>
+	<a href="#/skills">Skills</a>
+	<a href="#/education">Education</a>
+	<a href="#/projects">Projects</a>
+  	<a href="#/blog">Blog</a>
+  	<a href="#/resume">Resume</a>
+  	<a href="#/contact">Contact</a>
+
+</nav>
 <main>
-	<h1>Hello {name}!</h1>
-	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
-	<p><a href="/about">Click here</a> to see more about me!</p>
+	<Router {routes} /> 
 </main>
 
 <style>
-	main {
-		text-align: center;
-		padding: 1em;
-		max-width: 240px;
-		margin: 0 auto;
+	/* Navbar styling */
+	nav {
+		display: flex; /* this displays pages horizontally*/
+		gap: 1rem; /*spacing between links, size of font*/
+		margin: 1rem; /*pushes navbar away from edges by size of font*/
 	}
-
-	h1 {
-		color: #ff3e00;
-		text-transform: uppercase;
-		font-size: 4em;
-		font-weight: 100;
+	a {
+		text-decoration: none; /* removing the underline from links*/
+		color: #0070f3;
 	}
-
-	@media (min-width: 640px) {
-		main {
-			max-width: none;
-		}
+	a:hover {
+		text-decoration: underline; /*hover gives underline*/
 	}
+	
 </style>
