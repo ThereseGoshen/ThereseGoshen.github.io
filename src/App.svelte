@@ -1,5 +1,4 @@
 <script>
-	export let name;
 	import Router from "svelte-spa-router";
 
 	//importing the pages
