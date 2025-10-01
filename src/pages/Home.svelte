@@ -2,8 +2,7 @@
 <section class="hero">
   <h1>Hi, I'm Therese Goshen</h1>
 
-  <p>Aspiring Software Engineer | CS Student at CU Boulder | Cognitive Neuroscience </p>
-
+  <p>Aspiring Software Engineer | Cognitive Neuroscience Background | Technology Analyst</p>
 
   <div class="cta">
     <!-- resume  -->
