@@ -2,10 +2,10 @@
   import { onMount } from 'svelte';
   
 
-  const CLIENT_ID = 'f68837f1829748389b7203acd5915aa4';
-  const REDIRECT_URI = 'https://theresegoshen.github.io/callback';
+  const CLIENT_ID = 'aa40d44af89645e4869ebe5f13968b90';
+  const REDIRECT_URI = 'https://therese-goshen-github-io.vercel.app/api/callback';
   console.log("Redirect:", REDIRECT_URI);
-  
+
   //scopes - permissions the app is requesting
   const SCOPES = [
     'user-read-currently-playing',
