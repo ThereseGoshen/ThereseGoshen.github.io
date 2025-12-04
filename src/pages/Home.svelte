@@ -1,5 +1,7 @@
 <script>
   import { onMount } from 'svelte';
+  import SpotifyWidget from '../SpotifyWidget.svelte';
+
   
   // Stats that count up on page load
   let projectsCount = 0;
@@ -126,6 +128,9 @@
       </a>
     </div>
   </section>
+  <div class="spotify-widget-container">
+    <SpotifyWidget />
+  </div>
 </div>
 
 <style>
