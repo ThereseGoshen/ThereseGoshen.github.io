@@ -4,6 +4,7 @@
 
   const CLIENT_ID = 'f68837f1829748389b7203acd5915aa4';
   const REDIRECT_URI = 'https://theresegoshen.github.io/callback';
+  console.log("Redirect:", REDIRECT_URI);
   
   //scopes - permissions the app is requesting
   const SCOPES = [
