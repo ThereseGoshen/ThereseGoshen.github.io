@@ -1,9 +1,33 @@
 <!DOCTYPE html>
 <html>
-  <body>
-    <script>
-      // send access token back to your Svelte app (or store)
-      window.location.replace('/');
-    </script>
-  </body>
+<head>
+  <meta charset="utf-8" />
+  <title>Spotify Callback</title>
+</head>
+<body>
+  <p>Connecting to Spotify…</p>
+
+  <script>
+    // Parse URL parameters
+    const params = new URLSearchParams(window.location.search);
+    const code = params.get("code");
+    const error = params.get("error");
+
+    if (error) {
+      document.body.innerHTML = "<p>Spotify login failed: " + error + "</p>";
+      throw new Error(error);
+    }
+
+    if (!code) {
+      document.body.innerHTML = "<p>No authorization code received. Please reconnect.</p>";
+      throw new Error("Missing code");
+    }
+
+    // Save the code (localStorage works on GitHub Pages)
+    localStorage.setItem("spotify_auth_code", code);
+
+    // Redirect back to your main app
+    window.location.href = "/";
+  </script>
+</body>
 </html>
