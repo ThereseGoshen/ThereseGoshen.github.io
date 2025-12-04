@@ -5,7 +5,6 @@
 	import Home from "./pages/Home.svelte";
 	import About from "./pages/About.svelte";
 	import Contact from "./pages/Contact.svelte";
-	import Skills from "./pages/Skills.svelte";
 	import Resume from "./pages/Resume.svelte";
 	import Projects from "./pages/Projects.svelte";
 	import Blog from "./pages/Blog.svelte";
@@ -16,7 +15,6 @@
 		"/": Home,
 		"/about": About,
 		"/contact": Contact,
-		"/skills": Skills,
 		"/education": Education,
 		"/resume": Resume,
 		"/projects": Projects,
@@ -28,7 +26,6 @@
 
 	<a href="#/">Home</a>
 	<a href="#/about">About</a>
-	<a href="#/skills">Skills</a>
 	<a href="#/education">Education</a>
 	<a href="#/projects">Projects</a>
   	<a href="#/blog">Blog</a>
